@@ -11,6 +11,17 @@ input{
   border: 1px solid  #2E344D;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none}
+input[type=number] { -moz-appearance: textfield; }
+
+.porcentaje{
+  position: absolute;
+  top:123px;
+  right: 10px;
+  font-size: 14px;
+
+}
 #Button{
   background-color: #2E344D;
   color: #F5F7FB;
