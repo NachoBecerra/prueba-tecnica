@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #2E344D;  
+}
+
+input{
+  padding: 10px;
+  border-radius: 12px;
+  color: #2E344D;
+  border: 1px solid  #2E344D;
+}
+
+#Button{
+  background-color: #2E344D;
+  color: #F5F7FB;
+  border-radius: 12px;
+  font-size: 12px;
+  text-transform: none;
+  min-width: 85px;
+
+}
+#Button:hover{
+  background-color: #485178;
+}
+
+#ButtonEliminar{
+  background-color: rgb(163, 6, 6);
+  color: #F5F7FB;
+  border-radius: 12px;
+  font-size: 12px;
+  text-transform: none;
+  min-width: 85px;
+}
+#ButtonEliminar:hover{
+  background-color: #c80c0c;
+}
