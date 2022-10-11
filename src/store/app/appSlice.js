@@ -2,52 +2,53 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const inicialState = {
     isSaving: false,
-      messageSaved: '',
-      plantas: [{
+    messageSaved: '',
+    plantas: [{
         id: 1,
         nombre: "Planta 1",
-        salas: [{
-            id: 1,
-            nombre: "Sala 1",
-            maxCapacidad: 30,
-            ocupacion:40,
-        },{
-            id: 2,
-            nombre: "Sala 2",
-            maxCapacidad: 50,
-            ocupacion:20, 
-        }]
-      },{
+        salas: []
+    }, {
         id: 2,
         nombre: "Planta 2",
-        salas: [{
-            id: 1,
-            nombre: "Sala 1",
-            maxCapacidad: 60,
-            ocupacion:10,
-        },{
-            id: 2,
-            nombre: "Sala 2",
-            maxCapacidad: 20,
-            ocupacion:60, 
-        }]
-      }],
-      active: null,
-
+        salas: []
+    }],
+    active: null,
 }
 
 export const appSlice = createSlice({
     name: 'app',
     initialState: inicialState,
     reducers: {
-        isSaving: (state) =>{
+        isSaving: (state) => {
             state.isSaving = true
         },
-        setActivePlanta: (state, action) =>{
+        setActivePlanta: (state, action) => {
             state.active = action.payload
             state.isSaving = false
-        },  
+        },
+        setNewSala: (state, action) => {
+            state.plantas.map(planta => {
+                if (planta.id === action.payload.idPlanta) {
+                    state.active.salas.push(action.payload)
+                }
+            })
+            state.isSaving = false
+        },
+        setUpdateSala: (state, action) => {
+            state.active.salas.map(sala => {
+                if (sala.id === action.payload.id) {
+                    sala.nombre = action.payload.nombre
+                    sala.maxCapacidad = action.payload.maxCapacidad
+                    sala.ocupacion = action.payload.ocupacion
+                }
+            })
+            state.isSaving = false
+        },
+        setDeleteSala: (state, action) => {
+            state.active.salas = state.active.salas.filter(sala => sala.id !== action.payload.id)
+            state.isSaving = false
+        },
     }
 })
 
-export const { isSaving, setActivePlanta } = appSlice.actions
+export const { isSaving, setActivePlanta, setNewSala, setUpdateSala, setDeleteSala } = appSlice.actions

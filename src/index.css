@@ -1,48 +1,66 @@
 body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  color: #2E344D;  
+  color: #2e344d;
 }
 
-input{
+input {
   padding: 10px;
   border-radius: 12px;
-  color: #2E344D;
-  border: 1px solid  #2E344D;
+  color: #2e344d;
+  border: 1px solid #2e344d;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 90%;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none}
-input[type=number] { -moz-appearance: textfield; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
-.porcentaje{
-  position: absolute;
-  top:123px;
-  right: 10px;
+input.nombre {
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  width: 80%;
+}
+
+.porcentaje {
+  position: relative;
+  top: -28px;
+  left: 190px;
   font-size: 14px;
-
 }
-#Button{
-  background-color: #2E344D;
-  color: #F5F7FB;
+#Button {
+  background-color: #2e344d;
+  color: #f5f7fb;
   border-radius: 12px;
   font-size: 12px;
   text-transform: none;
   min-width: 85px;
-
 }
-#Button:hover{
+#Button:hover {
   background-color: #485178;
 }
 
-#ButtonEliminar{
+#botonModal{
+  margin-top: 20px;
+  padding: 10px;
   background-color: rgb(163, 6, 6);
-  color: #F5F7FB;
+  color: #f5f7fb;
   border-radius: 12px;
   font-size: 12px;
   text-transform: none;
   min-width: 85px;
 }
-#ButtonEliminar:hover{
-  background-color: #c80c0c;
+#botonModal:hover{
+  background-color: #c80c0c
+}
+
+.fontResponsive{
+  font-size: clamp(0.9rem, 9vw - 2rem, 1.2rem);
 }

@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Box,
   Divider,
@@ -8,20 +10,18 @@ import {
   Select,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { startSetPlanta } from '../../store/app/thunks'
+import { startSetPlanta } from "../../store/app";
 
 export const SeleccionPlanta = () => {
   const plantas = useSelector((state) => state.app.plantas);
 
   const [planta, setPlanta] = useState("");
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleChange = ({ target }) => {
     setPlanta(target.value);
-    dispatch(startSetPlanta(target.value))
+    dispatch(startSetPlanta(target.value));
   };
 
   return (
