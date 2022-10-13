@@ -52,8 +52,11 @@ Para comenzar, se debe elegir la planta que se desea visualizar. Para ello utili
  </ul>   
  </p>
 <p align="justify">
-  Por último, se ha implementado el proceso CRUD para trabajar con la base de datos de Firebase y así conseguir que los valores almacenados en la aplicación sean  persistentes. Paralelamente a esta inserción de datos en la BBDD, se ha realizado un POST de la información obtenida a la web API Mocha, para realizar una simulación de comunicación con un servicio backend.
+  A continuación se ha implementado el proceso CRUD para trabajar con la base de datos de Firebase y así conseguir que los valores almacenados en la aplicación sean  persistentes. Paralelamente a esta inserción de datos en la BBDD, se ha realizado un POST de la información obtenida a la web API Mocha, para realizar una simulación de comunicación con un servicio backend.
 </p>
+<p align="justify">
+ Para finalizar, se ha implementado un selector para cambiar el orden de visualización de las salas disponibles en la planta activa.
+<p>
 
 
 <br><br>
