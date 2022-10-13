@@ -36,7 +36,7 @@ export const SeleccionPlanta = () => {
       <Grid container>
         <Grid item>
           <FormControl sx={{ m: 1, minWidth: 210 }} size="small">
-            <InputLabel id="demo-select-small">
+            <InputLabel>
               Selecciona una planta
             </InputLabel>
             <Select

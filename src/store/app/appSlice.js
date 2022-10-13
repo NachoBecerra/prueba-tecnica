@@ -12,7 +12,11 @@ const inicialState = {
         nombre: "Planta 2",
         salas: []
     }],
-    active: null,
+    active: {
+        id: "",
+        nombre: "",
+        salas: []
+    },
 }
 
 export const appSlice = createSlice({
